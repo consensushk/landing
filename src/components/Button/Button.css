@@ -1,0 +1,43 @@
+.base {
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px 0px #ccc;
+  white-space: nowrap;
+  max-width: 384px;
+}
+.default {
+  background: var(--blue);
+  color: white;
+}
+.default:hover {
+  background: var(--darkBlue);
+}
+.inverted {
+  color: var(--dark);
+  background: white;
+}
+.inverted:hover {
+  background: var(--lighterGrey);
+}
+.sm {
+  width: 150px;
+}
+.md {
+  width: 200px;
+}
+.fullwidth {
+  width: 100%;
+}
+.disable {
+  background: var(--lightGrey);
+  color: white;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.disable:hover {
+  background: var(--lightGrey);
+  color: white;
+  box-shadow: none;
+}

@@ -1,16 +1,13 @@
 import * as React from 'react'
 import _bindAll from 'lodash/bindAll'
-import classNames from 'classnames/bind'
 
 import 'particles.js'
 import particlesConfig from './config/particles.js'
-
-import User from '~/utils/api/User'
+import Button from '~/components/Button'
 
 import styles from './Home.css'
 import '~/styles/global/global.css'
 
-const cx = classNames.bind(styles)
 class Home extends React.Component {
   constructor (props) {
     super(props)
@@ -19,28 +16,20 @@ class Home extends React.Component {
     }
 
     _bindAll(this, [
-      'handleEmailInput',
-      'onSubmit'
+      'onSubscribeClick'
     ])
   }
 
   componentDidMount () {
-    User.Info.get('foo').then(data => {
-      this.setState({ user: data })
-    })
-
     if (window.particlesJS) {
       window.particlesJS('particles-js', particlesConfig)
     }
   }
 
-  handleEmailInput (e) {
-    const email = e.target.value
-    this.setState({ email })
-  }
-
-  onSubmit () {
-    console.log(this.state.email)
+  onSubscribeClick () {
+    if (window) {
+      window.open('http://eepurl.com/c3sFAD')
+    }
   }
 
   render () {
@@ -63,18 +52,11 @@ class Home extends React.Component {
           Join our mailing list for exclusive Ethereum news and first hint of ConsensusHK updates.
 
           <div className={styles.newsletter}>
-            <input
-              type="email"
-              name="EMAIL"
-              className={styles.formControl}
-              placeholder="Your email address"
-              onChange={this.handleEmailInput}
+            <Button
+              content={'Subscribe'}
+              size='small'
+              onClick={this.onSubscribeClick}
             />
-            <button
-              onClick={this.onSubmit}
-              className={cx('button', 'newsletterButton')}>
-              Submit
-            </button>
           </div>
         </div>
       </div>
