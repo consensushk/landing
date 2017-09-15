@@ -1,7 +1,124 @@
-.container {
-  color: var(--blue);
+:root {
+  --homeGutter: 65px;
+}
 
-  svg {
-    width: 100px;
+.container {
+  height: 100vh;
+  font-weight: 300;
+  background: var(--grey);
+  margin: 0;
+  padding: 0;
+
+  .slogan {
+    position: absolute;
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 600;
+    letter-spacing: -0.15rem;
+    color: var(--black);
   }
+
+  @media screen and (min-width: 801px) {
+    .slogan {
+      top: var(--homeGutter);
+      left: var(--homeGutter);
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .slogan {
+      font-size: 38px;
+      line-height: 35px;
+      bottom: 200px;
+      left: var(--homeGutter);
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: var(--homeGutter);
+    right: var(--homeGutter);
+    letter-spacing: -0.1rem;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: right;
+    color: var(--black);
+  }
+  .mail {
+    position: absolute;
+    bottom: var(--homeGutter);
+    left: var(--homeGutter);
+    width: 250px;
+    font-size: 12px;
+  }
+  .newsletter {
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .formControl {
+    border: 0;
+    background: var(--blue);
+    color: white;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    width: 182px;
+    padding: 0 10px;
+    vertical-align: middle;
+  }
+  input::placeholder {
+    color: var(--grey);
+  }
+  .button {
+    display: inline-block;
+    padding: 6px 12px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    outline: 0;
+    text-decoration: none;
+    border-radius: 4px;
+    user-select: none;
+  }
+  .newsletterButton {
+    color: var(--blue);
+    background-color: #fff;
+    border: 0;
+    opacity: 1;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0;
+    height: 35px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 68px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .newsletterButton:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+#particles-js {
+  border-radius: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }

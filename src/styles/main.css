@@ -67,6 +67,10 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
+input {
+  outline: none;
+}
+
 input[type="radio"] {
   appearance: none;
   background: none;
