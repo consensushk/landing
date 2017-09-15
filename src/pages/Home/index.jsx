@@ -1,7 +1,7 @@
 import * as React from 'react'
 import _bindAll from 'lodash/bindAll'
 
-import 'particles.js'
+import Particles from 'react-particles-js'
 import particlesConfig from './config/particles.js'
 import Button from '~/components/Button'
 
@@ -20,14 +20,8 @@ class Home extends React.Component {
     ])
   }
 
-  componentDidMount () {
-    if (window.particlesJS) {
-      window.particlesJS('particles-js', particlesConfig)
-    }
-  }
-
   onSubscribeClick () {
-    if (window) {
+    if (typeof window !== 'undefined') {
       window.open('http://eepurl.com/c3sFAD')
     }
   }
@@ -35,7 +29,9 @@ class Home extends React.Component {
   render () {
     return (
       <div className={styles.container}>
-        <div id="particles-js" />
+        <Particles
+          params={particlesConfig}
+        />
 
         <div className={styles.slogan}>
           DECENTRALIZED <br />

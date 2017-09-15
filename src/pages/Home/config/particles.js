@@ -1,7 +1,7 @@
 export default {
   'particles': {
     'number': {
-      'value': 80,
+      'value': 20,
       'density': {
         'enable': true,
         'value_area': 800
@@ -54,7 +54,7 @@ export default {
     },
     'move': {
       'enable': true,
-      'speed': 2,
+      'speed': 1,
       'direction': 'top-right',
       'random': true,
       'straight': false,
