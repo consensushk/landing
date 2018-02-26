@@ -37,11 +37,9 @@
     position: absolute;
     top: var(--homeGutter);
     right: var(--homeGutter);
-    letter-spacing: -0.1rem;
-    font-size: 28px;
-    font-weight: bold;
-    text-align: right;
-    color: var(--black);
+    svg {
+      width: 350px;
+    }
   }
   .mail {
     position: absolute;

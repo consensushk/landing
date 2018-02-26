@@ -4,6 +4,7 @@ import _bindAll from 'lodash/bindAll'
 import Particles from 'react-particles-js'
 import particlesConfig from './config/particles.js'
 import Button from '~/components/Button'
+import LogoIcon from '~/assets/icons/logo.svg'
 
 import styles from './Home.css'
 import '~/styles/global/global.css'
@@ -41,7 +42,7 @@ class Home extends React.Component {
         </div>
 
         <div className={styles.logo}>
-          CONSENSUS HK
+          <LogoIcon />
         </div>
 
         <div className={styles.mail}>
